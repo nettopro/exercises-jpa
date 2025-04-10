@@ -5,6 +5,9 @@
     <persistence-unit name="exercises-jpa">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <class>model.basic.User</class>
+        <class>model.basic.Product</class>
+        <class>model.one2one.Client</class>
+        <class>model.one2one.Seat</class>
 
         <properties>
             <!-- MySQL Example -->
