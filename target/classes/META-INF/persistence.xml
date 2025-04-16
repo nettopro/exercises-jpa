@@ -10,6 +10,10 @@
         <class>model.one2one.Seat</class>
         <class>model.one2many.ItemOrdered</class>
         <class>model.one2many.Order</class>
+        <class>model.many2many.Uncle</class>
+        <class>model.many2many.Nephew</class>
+        <class>model.many2many.Movie</class>
+        <class>model.many2many.Actor</class>
 
         <properties>
             <!-- MySQL Example -->
