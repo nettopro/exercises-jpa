@@ -70,6 +70,21 @@ public class DAO<E> {
         return query.getResultList();
     }
 
+    public List<E> query(String nameQuery, Object... params){
+        TypedQuery<E> query = em.createNamedQuery(nameQuery, tableClass);
+        
+        for (int i = 0; i < params.length; i+= 2) {
+            query.setParameter(params[i].toString(), params[i+1]);
+        }
+
+        return query.getResultList();
+    }
+
+    public E queryOne(String nameQuery, Object... params){
+        List<E> list = query(nameQuery, params);
+        return list.isEmpty() ? null : list.get(0);
+    }
+
     public void close(){
         em.close();
     }
